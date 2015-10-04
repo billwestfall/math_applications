@@ -1,0 +1,62 @@
+# took the donaldgeraldrobert.minion example and decided to make it personal
+# MacBook-Air:~ billw$ /Applications/minion-1.8/bin/minion /Users/billw/Downloads/minion-1.8/benchmarks/small/williamwestfall.minion
+# Minion Version 1.8
+# HG version: 0
+# HG last changed date: unknown
+#  Run at: UTC Sun Oct  4 01:25:51 2015
+
+#    http://minion.sourceforge.net
+# If you have problems with Minion or find any bugs, please tell us!
+# Mailing list at: https://mailman.cs.st-andrews.ac.uk/mailman/listinfo/mug
+# Input filename: /Users/billw/Downloads/minion-1.8/benchmarks/small/williamwestfall.minion
+# Command line: /Applications/minion-1.8/bin/minion /Users/billw/Downloads/minion-1.8/benchmarks/small/williamwestfall.minion
+# Parsing Time: 0.000468
+# Setup Time: 0.000116
+# First Node Time: 0.000071
+# Initial Propagate: 0.000085
+# First node time: 0.000034
+# Sol: 4
+# Sol: 9
+# Sol: 6
+# Sol: 7
+# Sol: 1
+# Sol: 0
+# Sol: 8
+# Sol: 2
+# Sol: 3
+#
+# Solution Number: 1
+# Time:0.010130
+# Nodes: 2119
+#
+# Solve Time: 0.010208
+# Total Time: 0.010911
+# Total System Time: 0.000951
+# Total Wall Time: 0.013231
+# Maximum RSS (kB): 4104
+# Total Nodes: 2119
+# Problem solvable?: yes
+# Solutions Found: 1
+
+MINION 3
+**VARIABLES**
+DISCRETE a{0..9}
+DISCRETE e{0..9}
+DISCRETE f{0..9}
+DISCRETE i{0..9}
+DISCRETE l{0..9}
+DISCRETE m{0..9}
+DISCRETE s{0..9}
+DISCRETE t{0..9}
+DISCRETE w{0..9}
+**SEARCH**
+VARORDER [a,e,f,i,l,m,s,t,w]
+VALORDER [a,a,a,a,a,a,a,a,a]
+SYMORDER [a,e,f,i,l,m,s,t,w]
+PRINT[[a],[e],[f],[i],[l],[m],[s],[t],[w]]
+**TUPLELIST**
+**CONSTRAINTS**
+weightedsumleq([100000,10000,1000,100,10,1,100000,10000,1000,100,10,1,-100000,-10000,-1000], [w,i,l,l,i,a,m,w,e,s,t,f,a,l,l], 0)
+weightedsumgeq([100000,10000,1000,100,10,1,100000,10000,1000,100,10,1,-100000,-10000,-1000], [w,i,l,l,i,a,m,w,e,s,t,f,a,l,l], 0)
+gacalldiff([a,e,f,i,l,m,s,t,w])
+**EOF**
