@@ -1,4 +1,8 @@
-# from http://stackoverflow.com/a/3540346/5181812 , this will return the random word need
+# from http://stackoverflow.com/a/3540346/5181812
 
 import random
-print(random.choice(list(open('/usr/share/dict/words'))))
+import sys
+import subprocess
+rand_word=(random.choice(list(open('/Users/billw/Documents/web2'))))
+f1=open('./rand_stuff.txt', 'w+')
+f1.write(rand_word)
