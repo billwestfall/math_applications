@@ -5,6 +5,7 @@ python rand_line.py
 cat rand_stuff.txt
 unset RAND_NUM
 unset RANDSHELL
+unset RAND_ALB
 # add in random chance to take characters from head or tail of term
 RAND_NUM=$((( RANDOM % 2 ) + 1 ))
 if [ "$RAND_NUM" = 2 ]; then
