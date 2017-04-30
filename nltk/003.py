@@ -1,3 +1,5 @@
+from nltk.sem.logic import *
+read_expr = Expression.fromstring
 e1 = read_expr('exists x.P(x)')
 print(e1)
 e2 = e1.alpha_convert(Variable('z'))
