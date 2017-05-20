@@ -3,6 +3,6 @@
 beers = 99
 while (beers > 1):
    print(beers), print(' beers')
-   count = count - 1
+   beers = beers - 1
 
 print("Done")
