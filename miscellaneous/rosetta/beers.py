@@ -2,7 +2,7 @@
 
 beers = 99
 while (beers > 1):
-   print(beers ' beers')
+   print(beers" beers")
    beers = beers - 1
 
 print("Done")
