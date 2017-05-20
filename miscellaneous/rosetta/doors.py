@@ -1,8 +1,10 @@
 # my take on the 100 doors challege in Python
 
-beers_no = 99
-while (beers_no > 1):
-   print(beers_no), print (" beers")
-   beers_no = beers_no - 1
+import random
 
-print("Done")
+doors = 100
+prize = (random.randint(1,100))
+while (doors > 0):
+   if doors = prize
+   print ("The prize is begind door "), print(prize)
+   doors = doors - 1
