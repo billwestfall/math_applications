@@ -7,4 +7,4 @@ while (i > 0):
       print ("The Babbage number is "), print(i), print(" and the root is "), print(babbage)
       break
    else:
-i = i + 1
+      i = i + 1
