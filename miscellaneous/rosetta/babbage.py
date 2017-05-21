@@ -1,12 +1,10 @@
 # Babbage problem in Python
 
-import random
-
-doors = 100
-prize = (random.randint(1,100))
-while (doors > 0):
-   if doors == prize:
-      print ("The prize is begind door "), print(prize)
+i = 1
+babbage = i * i
+while (i > 0):
+   if babbage.find("269696") == -1:
+      print ("The Babbage number is "), print(i), print(" and the root is "), print(babbage)
       break
    else:
-doors = doors - 1
+i = i + 1
