@@ -1,4 +1,6 @@
 import nltk
+from nltk.parse.generate import generate
+from nltk import CFG
 
 f=open('thesaurus.txt','rU')
 raw=f.read()
