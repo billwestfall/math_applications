@@ -1,0 +1,1 @@
+# collatz number in Python
