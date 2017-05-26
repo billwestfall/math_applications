@@ -1,10 +1,10 @@
 # collatz number in Python
 
-doors = 100
-prize = (random.randint(1,100))
-while (doors > 0):
-   if doors == prize:
-      print ("The prize is begind door "), print(prize)
-      break
+my_number = raw_input('Enter a positive integer: ')
+while (doors != 1):
+   if my_number % 2 == 0:
+      $my_number = $my_number / 2
+      puts $my_number
    else:
-doors = doors - 1
+      $my_number = (3 * $my_number) + 1
+      puts $my_number
