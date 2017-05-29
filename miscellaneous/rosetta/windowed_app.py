@@ -3,7 +3,7 @@ from Tkinter import *
 master = Tk()
 
 def callback():
-    print "click!"
+    print("click me")
 
 b = Button(master, text="OK", command=callback)
 b.pack()
