@@ -18,7 +18,7 @@ for sdata in data:
   elif av > pass_threshold:
     
     sdata['assessment'] = 'passed'
-    else;
+  else;
     
     sdata['assessment'] = 'failed'
     
