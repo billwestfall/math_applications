@@ -14,7 +14,7 @@ for sdata in data:
   
   if av > merit_threshold:
     
-  sdata['assessment'] = 'passed with merit'
+    sdata['assessment'] = 'passed with merit'
   elif av > pass_threshold
     
     sdata['assessment'] = 'passed'
