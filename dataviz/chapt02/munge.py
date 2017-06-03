@@ -7,7 +7,7 @@ student_data = [ {'name': 'Bob', 'id':0, 'scores':[68, 7, 5, 56, 81]}, {'name': 
 def process_student_data(data, pass_threshold=60, merit_threshold=75): """ Perform some basic stats on some student data. """
 
 #C
-    for sdata in data:
+for sdata in data:
 
         av = sum(sdata['scores'])/float(len(sdata['scores']))
         sdata['average'] = av
@@ -25,6 +25,6 @@ def process_student_data(data, pass_threshold=60, merit_threshold=75): """ Perfo
         print("%s's (id: %d) final assessment is %s"%(
         sdata['name'], sdata['id'], sdata['assessment'].upper()))
 
-    #E
-    if __name__ == '__main__':
-      process_student_data(student_data)
+#E
+if __name__ == '__main__':
+    process_student_data(student_data)
