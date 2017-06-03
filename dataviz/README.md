@@ -1,1 +1,1 @@
-## files for Data Visualization with Python by Kyran Dale
+## files for Data Visualization with Python and Javascript by Kyran Dale
