@@ -1,4 +1,4 @@
-from datetime import strptime
+from datetime import datetime
 
 time_str = '2012/01/01 12:32:11'
 
