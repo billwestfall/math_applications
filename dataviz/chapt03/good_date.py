@@ -13,4 +13,4 @@ def dumps(obj):
     return json.dumps(obj, cls=JSONDateTimeEncoder)
 
 now_str = dumps({'time': datetime.datetime.now()})
-print now_str
+print(now_str)
