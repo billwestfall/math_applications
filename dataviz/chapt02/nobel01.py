@@ -1,3 +1,9 @@
+class Citizen(object):
+  
+  def __init__(self, name, country):
+    self.name = name
+    self.country = country
+    
 class Winner(Citizen):
 
   def __init__(self, name, country, category, year):
