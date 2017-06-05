@@ -9,3 +9,4 @@ function Counter(inc) {
 
 var inc2 = Counter(2);
 inc2();
+inc2();
