@@ -21,8 +21,7 @@ nobel_winners = [
 
 f = open('nobel_winners.csv', 'w')
 
-cols = nobel_winners[0].keys()
-cols.sort()
+cols = sorted(nobel_winners)
 
 with open('nobel_winners.csv', 'w') as f:
     f.write(','.join(cols) + '\n')
