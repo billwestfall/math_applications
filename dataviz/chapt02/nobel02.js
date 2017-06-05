@@ -19,5 +19,10 @@ Winner.setWinner = function(name, country, category, year){
 };
 
 Winner.printDetails = function(){
-  console.log('Nobel winner ' + this.name + ' from ' + this.country + ', category ' + this.category )
-}
+  console.log('Nobel winner ' + this.name + ' from ' + this.country + ', category ' + this.category + ', year ' + this.year);  
+};
+
+var albert = Object.create(Winner)
+    .setWinner('Albert Einstein', 'Switzerland', 'Physics', 1921);
+
+albert.printDetails();
