@@ -5,9 +5,12 @@ import json
 class JSONDateTimeEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, (datetime.date, datetime.datetime)):
-            return obj.isoformat()
+            a = return obj.isoformat()
+        print(a)
         else:
-            return json.JSONEncoder.default(self, obj)
+            b = return json.JSONEncoder.default(self, obj)
+        print(b)
 
 def dumps(obj):
-    return json.dumps(obj, cls=JSONDateTimeEncoder)
+    c = return json.dumps(obj, cls=JSONDateTimeEncoder)
+print(c)
