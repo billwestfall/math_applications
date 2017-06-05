@@ -4,8 +4,8 @@ items = ['F', 'C', 'C', 'A', 'B', 'A', 'C', 'E', 'F']
 
 cntr = Counter(items)
 print(cntr)
-cntr('C') -=1
-print(cntr)
+#cntr('C') -=1
+#print(cntr)
 
 d = defaultdict(int)
 
