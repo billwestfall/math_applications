@@ -1,4 +1,4 @@
-x = range(10)
+l = range(10)
 
 def is_odd(x):
     return x%2
