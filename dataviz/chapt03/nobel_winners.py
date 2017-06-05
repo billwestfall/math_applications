@@ -24,7 +24,7 @@ f = open('nobel_winners.csv', 'w')
 cols = sorted(nobel_winners, key=lambda x:sorted(x.keys()))
 
 with open('nobel_winners.csv', 'w') as f:
-    f.write(','.join(cols) + '\n')
+    f.write(','.join(str(cols)) + '\n')
 
     for o in nobel_winners:
         row = [str(o[col]) for col in cols]
