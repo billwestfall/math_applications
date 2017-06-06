@@ -44,5 +44,5 @@ class Winner(Base):
         return "<Winner(name='%s', category='%s', year='%s')>" %(self.name, self.category, self.year)
 
 albert = Winner(**nobel_winners[0])
-session_add(albert)
+session.add(albert)
 session.new
