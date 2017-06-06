@@ -24,7 +24,7 @@ from sqlalchemy import Column, Integer, String, Enum
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///data/nobel_prize.db', echo=True)
+engine = create_engine('sqlite:///nobel_prize.db', echo=True)
 
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
