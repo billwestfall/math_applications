@@ -3,19 +3,19 @@ nobel_winners = [
    'name': 'Albert Einstein',
    'nationality': 'Swiss',
    'sex': 'male',
-   'year': '1921'
+   'year': 1921
  },
  {'category': 'Physics',
   'name': 'Paul Dirac',
   'nationality': 'British',
   'sex': 'male',
-  'year': '1933'
+  'year': 1933
 },
 {'category': 'Chemistry',
  'name': 'Marie Curie',
  'nationality': 'Polish',
  'sex': 'female',
- 'year': '1911'
+ 'year': 1911
 }
 ]
 
