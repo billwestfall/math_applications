@@ -22,7 +22,7 @@ class Winner(Base):
     sex = Column(Enum('male', 'female'))
 
     def __repr__(self):
-        return "<Winner(name='%s', category='%s', year='%s")>" %(self.name, self.category, self.year)
+        return "<Winner(name='%s', category='%s', year='%s')>" %(self.name, self.category, self.year)
 
 session.new
 session.query(Winner).count()
