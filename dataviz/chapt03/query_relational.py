@@ -26,3 +26,5 @@ class Winner(Base):
 
 session.new
 session.query(Winner).count()
+result = session.query(Winner).filter_by(nationality='Swiss')
+list(result)
