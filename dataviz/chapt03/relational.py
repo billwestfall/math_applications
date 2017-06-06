@@ -3,8 +3,6 @@ from sqlalchemy import Column, Integer, String, Enum
 
 engine = create_engine('sqlite:///data/nobel_prize.db', echo=True)
 
-Session = session_maker(engine)
-
 Base = declarative_base()
 
 Base.meta.create_all()
