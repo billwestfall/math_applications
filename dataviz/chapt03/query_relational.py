@@ -43,4 +43,5 @@ class Winner(Base):
     def __repr__(self):
         return "<Winner(name='%s', category='%s', year='%s')>" %(self.name, self.category, self.year)
 
+session.new
 session.query(Winner).count()
