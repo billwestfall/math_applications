@@ -25,7 +25,3 @@ class Winner(Base):
         return "<Winner(name='%s', category='%s', year='%s')>" %(self.name, self.category, self.year)
 
 Base.metadata.create_all(engine)
-
-winner_rows = [Winner(**w) for w in nobel_winners]
-session.add_all(winner_rows)
-session.commit()
