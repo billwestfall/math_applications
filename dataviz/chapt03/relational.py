@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-engine = create_engine('sqlite:///data/nobel_prize.db', echo=True)
+engine = create_engine('sqlite:///nobel_prize.db', echo=True)
 
 class Winner(Base):
     __tablename__ = 'winners'
