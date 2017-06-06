@@ -43,6 +43,4 @@ class Winner(Base):
     def __repr__(self):
         return "<Winner(name='%s', category='%s', year='%s')>" %(self.name, self.category, self.year)
 
-Base.metadata.create_all(engine)
-
 session.query(Winner).count()
