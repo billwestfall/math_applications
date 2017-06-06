@@ -10,12 +10,6 @@ def main():
     session.configure(bind=engine)
     Base.metadata.create_all(engine)
 
-Session = session_maker(engine)
-
-Base = declarative_base()
-
-Base.meta.create_all()
-
 class Winner(Base):
     __tablename__ = 'winners'
 
