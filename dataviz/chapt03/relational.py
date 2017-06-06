@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 
 def main():
     base_name = 'nobel_prize.db'
-    engine = create_engine('sqlite:///{}'.format(base_name))
+    engine = create_engine('sqlite:///db/'.format(base_name))
     session = sessionmaker()
     session.configure(bind=engine)
     Base.metadata.create_all(engine)
