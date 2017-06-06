@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchmey import Column, Integer, String, Enum
+from sqlalchemy import Column, Integer, String, Enum
 
 engine = create_engine('sqlite:///data/nobel_prize.db', echo=True)
 
