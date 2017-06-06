@@ -1,16 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy import Column, Integer, String, Enum
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
 
-def main():
-    base_name = 'nobel_prize.db'
-    engine = create_engine('sqlite:///db/'.format(base_name))
-    session = sessionmaker()
-    session.configure(bind=engine)
-    Base.metadata.create_all(engine)
-    
 Base = declarative_base()
+
+engine = create_engine('sqlite:///data/nobel_prize.db', echo=True)
 
 class Winner(Base):
     __tablename__ = 'winners'
