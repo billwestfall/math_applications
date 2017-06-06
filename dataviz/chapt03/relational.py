@@ -3,7 +3,12 @@ from sqlalchemy import Column, Integer, String, Enum
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///data/nobel_prize.db', echo=True)
+def main():
+    base_name = 'nobel_prize.db'
+    engine = create_engine('sqlite:///{}'.format(base_name))
+    session = sessionmaker()
+    session.configure(bind=engine)
+    Base.metadata.create_all(engine)
 
 Session = session_maker(engine)
 
