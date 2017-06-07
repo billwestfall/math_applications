@@ -1,4 +1,5 @@
 from datetime import datetime
 
 d = datetime.now()
-d.isoformat()
+e = d.isoformat()
+print(e)
