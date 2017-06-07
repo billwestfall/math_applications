@@ -3,7 +3,7 @@ nobel_winners = [{"category": "Physics","name":"Albert Einstein","nationality":"
 import dataset
 from dataset import connect
 
-db = dataset.connect('sqlite:///nobel_prize:')
+db = dataset.connect('sqlite:///nobel_prize.db')
 
 wtable = db['winners']
 wtable.find()
