@@ -39,6 +39,11 @@ line#total {
   opacity: 0.5;
 }
 
+#chart path {
+  stroke: red;
+  fill: none;
+}
+
 div#main, div#sidebar {
   position: absolute;
 }
