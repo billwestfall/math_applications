@@ -44,6 +44,24 @@ line#total {
   fill: none;
 }
 
+#chart circle {
+  fill: lightblue;
+}
+
+#chart line {
+  stroke: #555555;
+  stroke-width: 2;
+}
+
+#chart rect {
+  stroke: red;
+  fill: white;
+}
+
+#chart polygon {
+  fill: green;
+}
+
 div#main, div#sidebar {
   position: absolute;
 }
