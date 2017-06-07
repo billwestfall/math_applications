@@ -23,6 +23,22 @@ div#chart-components {
   position: relative;
 }
 
+div#chart circle {
+  fill: lightblue;
+}
+
+div#chart line#total {
+  stroke: green;
+  stroke-width: 3px;
+  opacity: 0.5;
+}
+
+line#total {
+  stroke: green;
+  stroke-width: 3px;
+  opacity: 0.5;
+}
+
 div#main, div#sidebar {
   position: absolute;
 }
