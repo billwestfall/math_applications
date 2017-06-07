@@ -1,2 +1,2 @@
 from sklearn.datasets import make_moons
-makemoons()
+make_moons()
