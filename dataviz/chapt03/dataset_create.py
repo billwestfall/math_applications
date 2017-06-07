@@ -9,7 +9,8 @@ wtable = db['winners']
 wtable.find()
 
 with db as tx:
-    tx['winners'].insert(w)
+    for w in nobel_winners:
+        tx['winners'].insert(w)
     
 list(db['winners'].find())
 
