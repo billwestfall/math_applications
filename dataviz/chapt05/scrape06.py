@@ -12,4 +12,5 @@ def make_OECD_request(dsname, dimensions, params=None, root_dir=OECD_ROOT_URL):
 
     url = root_dir + '/' + dsname + '/' + dim_str + '/all'
     print('Requesting URL: ' + url)
-    return requests.get(url, params=params)
+    d = return requests.get(url, params=params)
+    print(d)
