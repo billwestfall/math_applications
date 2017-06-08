@@ -18,3 +18,4 @@ def REST_country_request(field='all', name=None, params=None):
         raise Exception('Request failed with status code ' + str(response.status_code))
 
     return response
+    print(response)
