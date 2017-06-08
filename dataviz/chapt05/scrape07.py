@@ -24,3 +24,4 @@ def REST_country_request(field='all', name=None, params=None):
     response.json()
     d = response.json()
     print(d)
+    print(response.status_code)
