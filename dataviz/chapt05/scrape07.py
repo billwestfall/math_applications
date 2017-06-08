@@ -16,8 +16,8 @@ def REST_country_request(field='all', name=None, params=None):
     print('Requesting URL: ' + url)
     response = requests.get(url, params=params, headers=headers)
 
-    if not response.status_code == 200:
-        raise Exception('Request failed with status code ' + str(response.status_code))
+#    if not response.status_code == 200:
+#        raise Exception('Request failed with status code ' + str(response.status_code))
 
     return response
     response = REST_country_request('currency', 'usd')
