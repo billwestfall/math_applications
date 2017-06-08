@@ -3,6 +3,8 @@ import requests
 REST_EU_ROOT_URL = 'http://restcountries.eu/rest/v1'
 
 def REST_country_request(field='all', name=None, params=None):
+    
+    headers={'User-Agent': 'Mozilla/5.0'}
 
     if not params:
         params = {}
