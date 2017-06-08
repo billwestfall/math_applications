@@ -1,3 +1,4 @@
+
 import requests
 from pymongo import MongoClient
 
@@ -7,8 +8,6 @@ db_nobel = get_mongo_database('nobel_prize')
 col = db_nobel['country_data']
 
 response = requests.get(url)
-
-return response.text
 
 client = MongoClient()
 col.insert(country_data)
