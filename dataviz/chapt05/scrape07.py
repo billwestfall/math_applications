@@ -9,7 +9,7 @@ def REST_country_request(field='all', name=None, params=None):
     if not params:
         params = {}
 
-    if field == 'all':
+#    if field == 'all':
         return requests.get(REST_EU_ROOT_URL + '/all')
 
     url = '%s/%s/%s'%(REST_EU_ROOT_URL, field, name)
