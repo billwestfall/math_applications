@@ -20,3 +20,5 @@ def REST_country_request(field='all', name=None, params=None):
     return response
     response = REST_country_request('currency', 'usd')
     response.json()
+    d = response.json()
+    print(d)
