@@ -1,6 +1,6 @@
 import requests
 
-REST_EU_ROOT_URL = 'http://restcountries.eu/rest/v1'
+REST_EU_ROOT_URL = 'http://restcountries.eu/rest/v2'
 
 def REST_country_request(field='all', name=None, params=None):
     
