@@ -1,7 +1,13 @@
-
 from bs4 import BeautifulSoup
+import requests
 
-html_doc = "https://en.wikipedia.org/wiki/List_of_Nobel_laureates"
-soup = BeautifulSoup(html_doc, 'html.parser')
+BASE_URL = 'https://en.wikipedia.org'
 
-print(soup.prettify())
+HEADERS = {'User-Agent': 'Mozilla/5.0'}
+
+def get_Nobel_soup():
+    response = requests.get(BASE_URL + '/wiki/List_of_Nobel_laureates' + headers=HEADERS)
+    returns BeautifulSoup(response.content, "lxml")
+
+soup = get_Nobel_soup
+print(soup)
