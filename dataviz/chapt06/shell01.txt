@@ -1,0 +1,237 @@
+MacBook-Air:chapt06 billw$ scrapy shell https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country
+2017-06-09 15:17:21 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: scrapybot)
+2017-06-09 15:17:21 [scrapy.utils.log] INFO: Overridden settings: {'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'LOGSTATS_INTERVAL': 0}
+2017-06-09 15:17:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-06-09 15:17:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-06-09 15:17:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-06-09 15:17:21 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-06-09 15:17:21 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-06-09 15:17:21 [scrapy.core.engine] INFO: Spider opened
+2017-06-09 15:17:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country> (referer: None)
+2017-06-09 15:17:22 [traitlets] DEBUG: Using default logger
+2017-06-09 15:17:22 [traitlets] DEBUG: Using default logger
+[s] Available Scrapy objects:
+[s]   scrapy     scrapy module (contains scrapy.Request, scrapy.Selector, etc)
+[s]   crawler    <scrapy.crawler.Crawler object at 0x1018eaf98>
+[s]   item       {}
+[s]   request    <GET https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country>
+[s]   response   <200 https://en.wikipedia.org/wiki/List_of_Nobel_laureates_by_country>
+[s]   settings   <scrapy.settings.Settings object at 0x104471390>
+[s]   spider     <DefaultSpider 'default' at 0x104f2e668>
+[s] Useful shortcuts:
+[s]   fetch(url[, redirect=True]) Fetch URL and update local objects (by default, redirects are followed)
+[s]   fetch(req)                  Fetch a scrapy.Request and update local objects 
+[s]   shelp()           Shell help (print this help)
+[s]   view(response)    View response in a browser
+In [1]: h2s = response.xpath('//h2')
+
+In [2]: len(h2s)
+Out[2]: 81
+
+In [3]: h2 = h2s[0]
+
+In [4]: h2s
+Out[4]: 
+[<Selector xpath='//h2' data='<h2>Contents</h2>'>,
+ <Selector xpath='//h2' data='<h2><span class="mw-headline" id="Summar'>,
+ <Selector xpath='//h2' data='<h2><span class="mw-headline" id="Argent'>,
+
+...
+ <Selector xpath='//h2' data='<h2><span class="mw-headline" id="Yugosl'>,
+ <Selector xpath='//h2' data='<h2><span class="mw-headline" id="See_al'>,
+ <Selector xpath='//h2' data='<h2><span class="mw-headline" id="Refere'>,
+ <Selector xpath='//h2' data='<h2>Navigation menu</h2>'>]
+
+In [5]: h2.extract()
+Out[5]: '<h2>Contents</h2>'
+
+In [6]: h2s[1].extract()
+Out[6]: '<h2><span class="mw-headline" id="Summary">Summary</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=List_of_Nobel_laureates_by_country&amp;action=edit&amp;section=1" title="Edit section: Summary">edit</a><span class="mw-editsection-bracket">]</span></span></h2>'
+
+In [7]: h2s[2].extract()
+Out[7]: '<h2><span class="mw-headline" id="Argentina">Argentina</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=List_of_Nobel_laureates_by_country&amp;action=edit&amp;section=2" title="Edit section: Argentina">edit</a><span class="mw-editsection-bracket">]</span></span></h2>'
+
+In [8]: h2_arg = h2s[2]
+
+In [9]: country = h2_arg.xpath('span[@class="mw-headline"}/text()').extract
+---------------------------------------------------------------------------
+XPathEvalError                            Traceback (most recent call last)
+//anaconda/lib/python3.5/site-packages/parsel/selector.py in xpath(self, query, namespaces, **kwargs)
+    221                              smart_strings=self._lxml_smart_strings,
+--> 222                              **kwargs)
+    223         except etree.XPathError as exc:
+
+src/lxml/lxml.etree.pyx in lxml.etree._Element.xpath (src/lxml/lxml.etree.c:57924)()
+
+src/lxml/xpath.pxi in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:167085)()
+
+src/lxml/xpath.pxi in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:166044)()
+
+XPathEvalError: Invalid predicate
+
+During handling of the above exception, another exception occurred:
+
+ValueError                                Traceback (most recent call last)
+<ipython-input-9-0e784a40b30b> in <module>()
+----> 1 country = h2_arg.xpath('span[@class="mw-headline"}/text()').extract
+
+//anaconda/lib/python3.5/site-packages/parsel/selector.py in xpath(self, query, namespaces, **kwargs)
+    224             msg = u"XPath error: %s in %s" % (exc, query)
+    225             msg = msg if six.PY3 else msg.encode('unicode_escape')
+--> 226             six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+    227 
+    228         if type(result) is not list:
+
+//anaconda/lib/python3.5/site-packages/six.py in reraise(tp, value, tb)
+    683             value = tp()
+    684         if value.__traceback__ is not tb:
+--> 685             raise value.with_traceback(tb)
+    686         raise value
+    687 
+
+//anaconda/lib/python3.5/site-packages/parsel/selector.py in xpath(self, query, namespaces, **kwargs)
+    220             result = xpathev(query, namespaces=nsp,
+    221                              smart_strings=self._lxml_smart_strings,
+--> 222                              **kwargs)
+    223         except etree.XPathError as exc:
+    224             msg = u"XPath error: %s in %s" % (exc, query)
+
+src/lxml/lxml.etree.pyx in lxml.etree._Element.xpath (src/lxml/lxml.etree.c:57924)()
+
+src/lxml/xpath.pxi in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:167085)()
+
+src/lxml/xpath.pxi in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:166044)()
+
+ValueError: XPath error: Invalid predicate in span[@class="mw-headline"}/text()
+
+In [10]: country = h2_arg.xpath('span[@class="mw-headline"}/text()').extract()
+---------------------------------------------------------------------------
+XPathEvalError                            Traceback (most recent call last)
+//anaconda/lib/python3.5/site-packages/parsel/selector.py in xpath(self, query, namespaces, **kwargs)
+    221                              smart_strings=self._lxml_smart_strings,
+--> 222                              **kwargs)
+    223         except etree.XPathError as exc:
+
+src/lxml/lxml.etree.pyx in lxml.etree._Element.xpath (src/lxml/lxml.etree.c:57924)()
+
+src/lxml/xpath.pxi in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:167085)()
+
+src/lxml/xpath.pxi in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:166044)()
+
+XPathEvalError: Invalid predicate
+
+During handling of the above exception, another exception occurred:
+
+ValueError                                Traceback (most recent call last)
+<ipython-input-10-50efbcc7fec4> in <module>()
+----> 1 country = h2_arg.xpath('span[@class="mw-headline"}/text()').extract()
+
+//anaconda/lib/python3.5/site-packages/parsel/selector.py in xpath(self, query, namespaces, **kwargs)
+    224             msg = u"XPath error: %s in %s" % (exc, query)
+    225             msg = msg if six.PY3 else msg.encode('unicode_escape')
+--> 226             six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+    227 
+    228         if type(result) is not list:
+
+//anaconda/lib/python3.5/site-packages/six.py in reraise(tp, value, tb)
+    683             value = tp()
+    684         if value.__traceback__ is not tb:
+--> 685             raise value.with_traceback(tb)
+    686         raise value
+    687 
+
+//anaconda/lib/python3.5/site-packages/parsel/selector.py in xpath(self, query, namespaces, **kwargs)
+    220             result = xpathev(query, namespaces=nsp,
+    221                              smart_strings=self._lxml_smart_strings,
+--> 222                              **kwargs)
+    223         except etree.XPathError as exc:
+    224             msg = u"XPath error: %s in %s" % (exc, query)
+
+src/lxml/lxml.etree.pyx in lxml.etree._Element.xpath (src/lxml/lxml.etree.c:57924)()
+
+src/lxml/xpath.pxi in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:167085)()
+
+src/lxml/xpath.pxi in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:166044)()
+
+ValueError: XPath error: Invalid predicate in span[@class="mw-headline"}/text()
+
+In [11]: country
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-11-f21236103977> in <module>()
+----> 1 country
+
+NameError: name 'country' is not defined
+
+In [12]: country = h2_arg.xpath('span[@class="mw-headline"}/text()').extract()
+---------------------------------------------------------------------------
+XPathEvalError                            Traceback (most recent call last)
+//anaconda/lib/python3.5/site-packages/parsel/selector.py in xpath(self, query, namespaces, **kwargs)
+    221                              smart_strings=self._lxml_smart_strings,
+--> 222                              **kwargs)
+    223         except etree.XPathError as exc:
+
+src/lxml/lxml.etree.pyx in lxml.etree._Element.xpath (src/lxml/lxml.etree.c:57924)()
+
+src/lxml/xpath.pxi in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:167085)()
+
+src/lxml/xpath.pxi in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:166044)()
+
+XPathEvalError: Invalid predicate
+
+During handling of the above exception, another exception occurred:
+
+ValueError                                Traceback (most recent call last)
+<ipython-input-12-50efbcc7fec4> in <module>()
+----> 1 country = h2_arg.xpath('span[@class="mw-headline"}/text()').extract()
+
+//anaconda/lib/python3.5/site-packages/parsel/selector.py in xpath(self, query, namespaces, **kwargs)
+    224             msg = u"XPath error: %s in %s" % (exc, query)
+    225             msg = msg if six.PY3 else msg.encode('unicode_escape')
+--> 226             six.reraise(ValueError, ValueError(msg), sys.exc_info()[2])
+    227 
+    228         if type(result) is not list:
+
+//anaconda/lib/python3.5/site-packages/six.py in reraise(tp, value, tb)
+    683             value = tp()
+    684         if value.__traceback__ is not tb:
+--> 685             raise value.with_traceback(tb)
+    686         raise value
+    687 
+
+//anaconda/lib/python3.5/site-packages/parsel/selector.py in xpath(self, query, namespaces, **kwargs)
+    220             result = xpathev(query, namespaces=nsp,
+    221                              smart_strings=self._lxml_smart_strings,
+--> 222                              **kwargs)
+    223         except etree.XPathError as exc:
+    224             msg = u"XPath error: %s in %s" % (exc, query)
+
+src/lxml/lxml.etree.pyx in lxml.etree._Element.xpath (src/lxml/lxml.etree.c:57924)()
+
+src/lxml/xpath.pxi in lxml.etree.XPathElementEvaluator.__call__ (src/lxml/lxml.etree.c:167085)()
+
+src/lxml/xpath.pxi in lxml.etree._XPathEvaluatorBase._handle_result (src/lxml/lxml.etree.c:166044)()
+
+ValueError: XPath error: Invalid predicate in span[@class="mw-headline"}/text()
+
+In [13]: country = h2_arg.xpath('span[@class="mw-headline"}/text()').extract()
