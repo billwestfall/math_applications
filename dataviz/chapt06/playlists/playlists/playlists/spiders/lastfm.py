@@ -77,4 +77,4 @@ class LastFMCrawler(Spider):
             #    track['duration'] = duration[0].extract()
             pl['tracks'].append(track['foreignid'])
             #yield track
-yield pl
+            yield pl
