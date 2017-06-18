@@ -1,2 +1,2 @@
 print("Boolean and test: ")
-print(test AND test)
+print(test == test)
