@@ -8,6 +8,6 @@ if test == test:
 print("Boolean false test: ")
 if test == 0:
   checker = True
-  else: 
+else: 
   checker = False
   print(checker)
