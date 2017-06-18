@@ -1,4 +1,5 @@
-test = "test"
+checker = None
 
 print("Boolean and test: ")
-print(test == test)
+if test == test:
+  checker = True
