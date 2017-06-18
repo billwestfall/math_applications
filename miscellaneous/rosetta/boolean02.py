@@ -4,3 +4,4 @@ test = "test"
 print("Boolean and test: ")
 if test == test:
   checker = True
+  print(checker)
