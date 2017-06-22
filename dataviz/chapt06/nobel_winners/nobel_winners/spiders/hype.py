@@ -11,4 +11,4 @@ class BlogSpider(scrapy.Spider):
             yield {'artist': title.css('a ::text').extract_first()}
 
         for next_page in response.css('div.prev-post > a'):
-yield response.follow(next_page, self.parse)
+            yield response.follow(next_page, self.parse)
