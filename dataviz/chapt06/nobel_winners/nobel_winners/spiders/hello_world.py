@@ -1,3 +1,5 @@
+# run as scrapy runspider -t json -o hello.json hello_world.py
+
 import scrapy
 
 class BlogSpider(scrapy.Spider):
