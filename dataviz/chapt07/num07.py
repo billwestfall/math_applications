@@ -7,6 +7,6 @@ line_array = np.linspace(2, 10, 5)
 print("a linspace array")
 print(line_array)
 
-arrange_array = np.arrange(2, 10, 2)
-print("using the array arrange function")
+arrange_array = np.arange(2, 10, 2)
+print("using the array arange function")
 print(arrange_array)
