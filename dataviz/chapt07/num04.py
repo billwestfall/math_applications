@@ -18,7 +18,7 @@ print("as a three dimensional array:")
 print(a)
 print_array_details(a)
 
-x = np.array([1, 2, 3], [4, 5, 6], np.int32)
+x = np.array([[1, 2, 3], [4, 5, 6]], np.int32)
 print(x.shape)
 print("change to one dimension")
 x.shape = (6,)
