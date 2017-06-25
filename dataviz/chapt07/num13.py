@@ -12,3 +12,6 @@ print(csum)
 
 csum[3:] = csum[3:] - csum[:-3]
 print(csum)
+
+a = arange(10)
+print(moving_average(a, 4))
