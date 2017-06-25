@@ -7,5 +7,5 @@ def moving_average(a, n=3):
 
 a = np.arange(6)
 print("The array")
-csum = np.csum(a)
+csum = np.cumsum(a)
 print(csum)
