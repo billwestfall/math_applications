@@ -9,3 +9,6 @@ a = np.arange(6)
 print("The array")
 csum = np.cumsum(a)
 print(csum)
+
+csum[3:] = csum[3:] - csum[:-3]
+print(csum)
