@@ -4,3 +4,5 @@ import numpy as np
 
 df = pd.read_json('last.json')
 print(df)
+print(df.columns)
+print(df.index)
