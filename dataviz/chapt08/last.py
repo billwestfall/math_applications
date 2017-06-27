@@ -5,6 +5,7 @@ import numpy as np
 df = pd.read_json('last.json')
 #print(df)
 print(df.columns)
+print(df['weeklytrackchart'])
 #print(df.index)
 #df = df.set_index('weeklytrackchart.track')
 #print(df)
