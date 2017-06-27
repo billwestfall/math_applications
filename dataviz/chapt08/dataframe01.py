@@ -6,3 +6,6 @@ todays_date = datetime.datetime.now().date()
 index = pd.date_range(todays_date-datetime.timedelta(10), periods=10, freq='D')
 
 columns = ['A','B', 'C']
+
+df = pd.DataFrame(data, index=index, columns=columns)
+print(df)
