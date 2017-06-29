@@ -7,7 +7,7 @@ def get_mongo_database(db_name, collection, query={}, host='localhost', port=270
     conn = MongoClient()
 
 def mongo_to_dataframe(db_name, collection, query={}, host='localhost', port=27017, username="", password="", no_id="true"):
-    db = get_mongo_database()
+    db = get_mongo_database(db_name, collection)
     cursor = db[collection].find(query)
     df = pd.dataframe(list(cursor))
 
