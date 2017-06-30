@@ -43,3 +43,5 @@ print("return only duplicate entries for name")
 
 dupe_by_group = pd.concat([g for _,g in df.groupby('name') if len(g) > 1])['name']
 print(dupe_by_group)
+print("number of dupes in name by groupby")
+print(dupe_by_group.count())
