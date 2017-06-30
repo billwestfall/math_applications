@@ -7,6 +7,7 @@ print(df)
 print(df.info())
 print(df.describe())
 print(df.describe(include=['object']))
+print(df.head())
 
 #def get_mongo_database(db_name="nobel_prize", collection="winners", query={}, host='localhost', port=27017, username="", password="", no_id="true"):
 #    conn = MongoClient()
