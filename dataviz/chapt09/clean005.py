@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from pymongo import MongoClient
 
 df = pd.read_json(open("data/nobel_winners_dirty.json"))
