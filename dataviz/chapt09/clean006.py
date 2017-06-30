@@ -31,3 +31,6 @@ print(dupes_by_name.count())
 all_dupes = df[df.duplicated('name') | df.duplicated('name', keep='last')]
 print("all duplicate entries")
 print(all_dupes.count())
+all_dupes = df[df.name.isin(dupes_by_name.name)]
+print("use dataframe to find dupes")
+print(all_dupes.count())
