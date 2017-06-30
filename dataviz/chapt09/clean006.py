@@ -38,3 +38,8 @@ print("Use Pandas groupby")
 
 for name, rows in df.groupby('name'):
     print('name: %s, number of rows: %d'%(name, len(rows)))
+
+print("return only duplicate entries for name")
+
+dupe_by_group = pd.concat([g for _,g in df.groupby('name') if len(g) > 1])['name']
+print(dupe_by_group)
