@@ -34,3 +34,7 @@ print(all_dupes.count())
 all_dupes = df[df.name.isin(dupes_by_name.name)]
 print("use dataframe to find dupes")
 print(all_dupes.count())
+print("Use Pandas groupby")
+
+for name, rows in df.groupby('name'):
+    print('name: %s, number of rows: %d'%(name, len(rows)))
