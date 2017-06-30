@@ -24,3 +24,6 @@ print(df[df.name.str.contains('\*')])
 print("find number of null entries")
 df = df[df.born_in.isnull()]
 print(df.count())
+dupes_by_name = df[df.duplicated('name')]
+print("find duplicate name entries")
+print(dupes_by_name.count())
