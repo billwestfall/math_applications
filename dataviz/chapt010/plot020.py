@@ -8,6 +8,6 @@ tips = sns.load_dataset('tips')
 print(tips)
 
 pal = dict(Female='red', Male='blue')
-sns.lmplot(x="total_bill", y="tip", hue="sex", markers=["D", "s"], col="smoker", rwo="time", data=tips, palette=pal, size=4, aspect=1)
+sns.lmplot(x="total_bill", y="tip", hue="sex", markers=["D", "s"], col="smoker", row="time", data=tips, palette=pal, size=4, aspect=1)
 
 plt.savefig('sns_tip_scatter03.png', dpi=200)
