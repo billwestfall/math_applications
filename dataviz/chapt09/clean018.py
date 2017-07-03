@@ -88,7 +88,7 @@ def dataframe_to_mongo(df, db_name, collection, host='localhost', port='27017'):
     records = df.to_dict('records')
     db[collection].insert(records)
 
-df_clean, df_born_in = clean_data()
+df_clean, df_born_in = clean_data(df)
 
 dataframe_to_mongo(df_clean, 'nobel_prize', 'winners')
 dataframe_to_mongo(df_born_in, 'nobel_prize', 'winners_born_in')
