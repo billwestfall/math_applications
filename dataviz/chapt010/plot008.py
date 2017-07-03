@@ -11,7 +11,7 @@ fig, ax = plt.subplots(figsize=(8, 4))
 bar_width = 0.4
 xlocs = np.arange(len(foo_data))
 ax.bar(xlocs-bar_width, foo_data, bar_width, color='#fde0bc', label='Fooland')
-ax.bar(xlocs, foo_data, bar_data, bar_width, color='peru', label='Barland')
+ax.bar(xlocs, bar_data, bar_width, color='peru', label='Barland')
 ax.set_yticks(range(12))
 ax.set_xticks(ticks=range(len(foo_data)))
 ax.set_xticklabels(labels)
