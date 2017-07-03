@@ -9,7 +9,7 @@ y = np.random.randn(200, 3).cumsum(0)
 
 plots = plt.plot(x, y)
 plt.legend(plots, ('foo', 'bar', 'baz'), loc = 'best', framealpha=0.25, prop={'size':'small', 'family':'monospace'})
-plt.gcf().set_size_inches(10, 6)
+plt.gcf().set_size_inches(10, 5)
 plt.title('Random trends')
 plt.xlabel('Date')
 plt.ylabel('Cumulative sum')
