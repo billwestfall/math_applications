@@ -45,7 +45,7 @@ valid_dupes = df[df.duplicated('name') | df.duplicated('name', keep='last')].sor
 print(valid_dupes)
 
 print("correct category field")
-df = df.ix[df.name == 'Alexis Carrel', 'category'] = 'Physiology or Medicine'
+df.ix[df.name == 'Alexis Carrel', 'category'] = 'Physiology or Medicine'
 print(df.count())
 
 print("entries with missing gender")
@@ -53,6 +53,6 @@ miss_gend = df[df.gender.isnull()]['name']
 print(miss_gend)
 
 print("add missing gender and remove institutions")
-df = df.ix[df.name == 'Ragnar Granit', 'gender'] = 'male'
+df.ix[df.name == 'Ragnar Granit', 'gender'] = 'male'
 df = df[df.gender.notnull()]
 print(df.count())
