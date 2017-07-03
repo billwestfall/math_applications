@@ -71,7 +71,6 @@ for i,row in df.iterrows():
 print("set no death date to NaN")
 df.date_of_death = pd.to_datetime(df.date_of_death, errors='coerce')
 
-df['award_age'] = df.year - pd.DatetimeIndex(df.date_of_birth)
-.year
+#df['award_age'] = df.year - pd.DatetimeIndex(df.date_of_birth).year
 
 #print(df.sort_values('award_age').iloc[:10] [['name', 'award_age', 'category', 'year']])
