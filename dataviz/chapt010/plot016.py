@@ -11,5 +11,5 @@ y = np.random.randn(num_points) * 10 + x*gradient
 data = pd.DataFrame({'dummy x':x, 'dummy y' :y})
 sns.lmplot('dummy x', 'dummy y', data, size=4, aspect=2, scatter_kws={"color":"slategray"}, line_kws={"linewidth": 2, "linestyle":'--', "color": "seagreen"},markers='D',ci=68)
 
-plt.suptitle('Scatterplot with Seaborn')
+plt.suptitle('Scatterplot with standard error confidence')
 plt.savefig('mpl_confidence_seaborn.png', dpi=200)
