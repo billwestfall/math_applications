@@ -11,5 +11,5 @@ y = np.random.randn(num_points) * 10 + x*gradient
 data = pd.DataFrame({'dummy x':x, 'dummy y' :y})
 sns.lmplot('dummy x', 'dummy y', data, size=4, aspect=2)
 
-fig.suptitle('Scatterplot with Seaborn')
-fig.savefig('mpl_scatter_seaborn.png', dpi=200)
+plt.suptitle('Scatterplot with Seaborn')
+plt.savefig('mpl_scatter_seaborn.png', dpi=200)
