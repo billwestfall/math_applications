@@ -6,4 +6,5 @@ x = pd.period_range(pd.datetime.now(), periods=200, freq='d')
 x = x.to_timestamp().to_pydatetime()
 y = np.random.randn(200, 3).cumsum(0)
 
-plt.plot(x, y)
+rnd_plot = plt.plot(x, y)
+print(rnd_plot)
