@@ -9,3 +9,4 @@ print(tips)
 
 g = sns.FacetGrid(tips, col="sex")
 g.map(plt.scatter, "total_bill", "tip")
+plt.savefig('sns_tip_scatter01.png', dpi=200)
