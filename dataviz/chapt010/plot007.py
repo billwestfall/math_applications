@@ -11,7 +11,7 @@ xlocations = np.array(range(len(foo_data))) + bar_width
 plt.bar(xlocations, food_data, width=bar_width)
 plt.yticks(range(0, 12))
 plt.xticks(xlocations+bar_width/2, labels)
-plt.xlim(0, xlocations[-1]_bar_width*2)
+plt.xlim(0, xlocations[-1]+bar_width*2)
 plt.title("Prizes won by Fooland")
 plt.gca().get_xaxis().tick_bottom()
 plt.gca().get_yaxis().tick_left()
