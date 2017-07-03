@@ -9,7 +9,7 @@ y = np.random.randn(200, 3).cumsum(0)
 
 figure, ax = plt.subplots()
 plots = ax.plot(x, y, label='')
-figure.set)size_inches(8, 4)
+figure.set_size_inches(8, 4)
 ax.legend(plots, ('foo', 'bar', 'baz'), loc='best', framealpha=0.25, prop={'size':'small', 'family':'monospace'})
 ax.set_title('Random trends')
 ax.set_xlabel('Date')
