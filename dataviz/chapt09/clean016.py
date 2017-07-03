@@ -66,4 +66,4 @@ for i,row in df.iterrows():
     try:
         pd.to_datetime(row.date_of_death, errors='raise')
     except:
-        print('%s(%s, %d)'%(row.date_of_death.ljust(30), i))
+        print('%s(%s, %d)'%(row.date_of_death.ljust(30), row['name'], i))
