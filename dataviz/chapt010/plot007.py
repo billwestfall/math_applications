@@ -8,7 +8,7 @@ foo_data = [3, 6, 10, 4]
 
 bar_width = 0.5
 xlocations = np.array(range(len(foo_data))) + bar_width
-plt.bar(xlocations, food_data, width=bar_width)
+plt.bar(xlocations, foo_data, width=bar_width)
 plt.yticks(range(0, 12))
 plt.xticks(xlocations+bar_width/2, labels)
 plt.xlim(0, xlocations[-1]+bar_width*2)
