@@ -6,10 +6,10 @@ import seaborn as sb
 import pymongo
 from pymongo import MongoClient
 
-def get_mongo_database(db_name="nobel_prize", collection="winners", query={}, host='localhost', port=27017, username="", password="", no_id="true"):
+def get_mongo_database(db_name="nobel_prize", collection="winners_full", query={}, host='localhost', port=27017, username="", password="", no_id="true"):
     conn = MongoClient()
 
-def mongo_to_dataframe(db_name="nobel_prize", collection="winners", query={}, host='localhost', port=27017, username="", password="", no_id="true"):
+def mongo_to_dataframe(db_name="nobel_prize", collection="winners_full", query={}, host='localhost', port=27017, username="", password="", no_id="true"):
     db = get_mongo_database(db_name, collection)
     cursor = db[collection].find(query)
     df = pd.dataframe(list(cursor))
@@ -21,5 +21,5 @@ def mongo_to_dataframe(db_name="nobel_prize", collection="winners", query={}, ho
 
 plt.rcParams['figure.figsize'] = 8, 4
 
-df = mongo_to_dataframe('nobel_prize', 'winners_clean')
+df = mongo_to_dataframe('nobel_prize', 'winners_full')
 df.info()
