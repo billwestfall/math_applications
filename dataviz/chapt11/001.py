@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import json
 import seaborn as sb
+import pymongo
+from pymongo import MongoClient
 
 def get_mongo_database(db_name="nobel_prize", collection="winners", query={}, host='localhost', port=27017, username="", password="", no_id="true"):
     conn = MongoClient()
