@@ -3,4 +3,5 @@ simple attempt at card bot see http://rosettacode.org/wiki/Playing_cards#Python_
 on a Mac make sure to use python3, like:
 
 ```virtualenv -p /usr/local/bin/python3 py3env```
+
 ```source py3env/bin/activate```
