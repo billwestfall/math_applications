@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  SimpleConfig:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    DeletionPolicy : Retain
+    Properties:
+      AutoScalingGroupName: 'billw_as_test'
+      AvailabilityZones:
+        Fn::GetAZs: ""
+      LaunchConfigurationName: 'billw_launch_test01'
+      MaxSize: "0"
+      MinSize: "0"
