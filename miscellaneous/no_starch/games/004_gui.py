@@ -13,7 +13,7 @@ timeleft = 60
 # function that will start the game. 
 def startGame(event): 
 	
-	if timeleft == 30: 
+	if timeleft == 60: 
 		
 		# start the countdown timer. 
 		countdown() 
