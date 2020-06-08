@@ -22,8 +22,7 @@ def checkCave(chosenCave):
     time.sleep(2)
     print('It is dark and spooky...')
     time.sleep(2)
-    print('A large dragon jumps out in front of you! He opens his jaws
-        and...')
+    print('A large dragon jumps out in front of you! He opens his jaws and...')
     print()
     time.sleep(2)
 
