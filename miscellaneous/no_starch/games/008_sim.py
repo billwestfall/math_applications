@@ -62,9 +62,9 @@ def stats():
     p.water -= 10
     p.food -= 10
     print("Food:")
-    print p.food
+    print(p.food)
     print("Water:")
-    print p.water
+    print(p.water)
     if p.water == 0:
         print("Game Over")
         sys.exit()
