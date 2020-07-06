@@ -70,7 +70,7 @@ def stats():
         sys.exit()
     else:
         print("Money:")
-        print p.money
+        print(p.money)
         cycle()
 
 def cycle():
