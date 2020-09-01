@@ -4,4 +4,4 @@ cardList = ["Ace \[ClubSuit]", "9 \[ClubSuit]", "10 \[ClubSuit]", "Jack \[ClubSu
 
 mylist = ["apple", "banana", "cherry"]
 
-print(random.sample(mylist, weights = [10, 1, 1], k = 14))
+print(random.sample(mylist, k = 14))
