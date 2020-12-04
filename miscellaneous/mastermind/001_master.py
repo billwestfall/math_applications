@@ -40,7 +40,7 @@ def play_game():
  
     while True:
         print()
-        guess = input(f"Enter a guess of length {code_length} ({letters}): \").upper().strip()
+        guess = input(f"""Enter a guess of length {code_length} ({letters}): """).upper().strip()
  
         if len(guess) != code_length or any([char not in letters for char in guess]):
             continue
