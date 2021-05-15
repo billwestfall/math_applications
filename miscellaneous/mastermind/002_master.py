@@ -31,8 +31,8 @@ def play_game():
     print("In this hint, X denotes a correct color, and O a letter in the original string but in a different position.")
     print()
 
-    number_of_letters = safe_int_input("Select a number of possible letters for the code (2-6): ", 2, 6)
-    code_length = safe_int_input("Select a length for the code (4-4): ", 4, 4)
+    number_of_letters = safe_int_input("Select a number of possible letters for the code (6): ", 6, 6)
+    code_length = safe_int_input("Select a length for the code (1-4): ", 1, 4)
 
     letters = 'WBURGY'[:number_of_letters]
     code = ''.join(random.choices(letters, k=code_length))
