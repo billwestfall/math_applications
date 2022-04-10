@@ -1,7 +1,7 @@
 import numpy as np
 
-a1 = [4, 4]
-arr = np.random.randint(1, 4, size = (6, 6))
+a1 = [6, 6]
+arr = np.random.randint(1, 4, size = (3, 3))
 arr_sum = np.sum(arr, axis=1)
 arr_sumb = np.sum(arr, axis=0)
  
