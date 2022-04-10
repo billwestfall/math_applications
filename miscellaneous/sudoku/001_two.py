@@ -12,5 +12,3 @@ if np.array_equal(arr_sum, a1) and np.array_equal(arr_sumb, a1):
  print(arr_sum)
 else:
  print("Not sudoku")
-print(arr_sum)
-print(arr_sumb)
