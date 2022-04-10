@@ -1,6 +1,6 @@
 import numpy as np
  
-arr = np.random.randint(0, 5, size = 4)
+arr = np.random.randint(1, 2, size = 2)
  
 print('-----Generated Random Array----')
 print(arr)
