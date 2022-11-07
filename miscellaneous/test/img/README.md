@@ -1,0 +1,1 @@
+folder for heuristics images
