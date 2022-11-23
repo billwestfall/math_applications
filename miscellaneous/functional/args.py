@@ -6,4 +6,4 @@ def combine_2_and_3(func):
 print(combine_2_and_3(math.fmod))
 print(combine_2_and_3(math.gcd))
 print(combine_2_and_3(math.remainder))
-print(combine_2_and_3(math.prod))
+print(combine_2_and_3(math.lcm))
