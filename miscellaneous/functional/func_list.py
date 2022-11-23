@@ -1,3 +1,5 @@
+import math
+
 def double(x):
   return x * 2
 
@@ -8,6 +10,7 @@ def squared(x):
   return x * x
 
 function_list = [
+  math.sqrt,
   double,
   minus_one,
   squared
