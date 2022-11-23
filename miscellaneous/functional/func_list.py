@@ -1,7 +1,7 @@
 def double(x):
   return x * 2
 
-def minus _one(x):
+def minus_one(x):
   return x - 1
 
 def squared(x):
