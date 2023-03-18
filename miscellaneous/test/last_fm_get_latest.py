@@ -1,10 +1,20 @@
-import lastfm
-import asyncio
+import requests
+import json
 
-client = lastfm.Client('client_key') # Replace with your client key (client_secret is optional)
+headers = {
+    'user-agent': "cmd_api"
+}
 
-async def main():
-    recent_tracks = await client.get_recent_tracks("username", limit=5)
-    print(recent_tracks[0].title) # prints the title of the users most recently scrobbled track
+payload = {
+    'api_key': '<key>',
+    'method': 'user.getrecenttracks',
+    'format': 'json',
+    'user': '<name>',
+    'limit': '1'
+}
 
-asyncio.run(main())
+r = requests.get('http://ws.audioscrobbler.com/2.0/', headers=headers, params=payload)
+status = r.status_code
+y = (r.json())
+print(y["recenttracks"]["track"][0]["artist"]['#text'])
+print(y["recenttracks"]["track"][0]["name"])
