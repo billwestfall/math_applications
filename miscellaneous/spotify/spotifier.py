@@ -16,4 +16,4 @@ if response.status_code == 200:
     track_name = track_info["name"]
     print(track_name)
 else:
-    print("Error retrieving track information")
+    print(response)
