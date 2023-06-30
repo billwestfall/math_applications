@@ -46,3 +46,15 @@ print(roll)
 mss = roll + d
 print("MSS value is: ")
 print(mss)
+
+e = mss + 1
+f = mss + 5
+
+if mss <= d
+    print("It's a hit!")
+
+elif mss in range(e,f)
+    print("It's a walk")
+
+else
+    print("Batter is out")
