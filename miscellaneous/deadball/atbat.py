@@ -29,13 +29,13 @@ elif b in range(351,400):
     roll = random.randint(-4, -1)
 
 elif b in range(401,500):
-    roll = random.randint(-1, -8)
+    roll = random.randint(-8, -1)
 
 elif b in range(501,600):
-    roll = random.randint(-1, -12)
+    roll = random.randint(-12, -1)
 
 elif b in range(601,700):
-    roll = random.randint(-1, -20)
+    roll = random.randint(-20, -1)
 
 else:
     roll = -20
