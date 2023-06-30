@@ -56,5 +56,5 @@ if (mss <= d):
 elif (mss in range(e,f)):
     print("It's a walk")
 
-else
+else:
     print("Batter is out")
