@@ -40,4 +40,9 @@ elif b == range(601,700):
 else:
     roll = -20
 
-    
+print("Pitcher dice roll is: ")
+print(roll)
+
+mss = roll + bat
+print("MSS value is: ")
+print(mss)
