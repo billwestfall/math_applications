@@ -13,28 +13,28 @@ b = int(c)
 bat_avg = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 bat = random.choice(bat_avg)
 
-if b in range(0,100):
+if b in range(0,101):
     roll = random.randint(1, 20)
 
-elif b in range(101,200):
+elif b in range(101,201):
     roll = random.randint(1, 12)
 
-elif b in range(201,300):
+elif b in range(201,301):
     roll = random.randint(1, 8)
 
-elif b in range(301,350):
+elif b in range(301,351):
     roll = random.randint(1, 4)
 
-elif b in range(351,400):
+elif b in range(351,401):
     roll = random.randint(-4, -1)
 
-elif b in range(401,500):
+elif b in range(401,501):
     roll = random.randint(-8, -1)
 
-elif b in range(501,600):
+elif b in range(501,601):
     roll = random.randint(-12, -1)
 
-elif b in range(601,700):
+elif b in range(601,701):
     roll = random.randint(-20, -1)
 
 else:
