@@ -3,12 +3,12 @@ import random
 print("Enter first two digits of batter's batting average (no decimal):")
 
 a = input()
-b = int(a)
+d = int(a)
 
 print("Enter the pitcher's ERA (no decimal):")
 
 c = input()
-d = int(c)
+b = int(c)
 
 bat_avg = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 bat = random.choice(bat_avg)
@@ -43,6 +43,6 @@ else:
 print("Pitcher dice roll is: ")
 print(roll)
 
-mss = roll + bat
+mss = roll + d
 print("MSS value is: ")
 print(mss)
