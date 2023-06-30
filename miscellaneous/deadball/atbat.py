@@ -12,28 +12,28 @@ d = int(c)
 
 bat = random.randint(10, 100, 10)
 
-if b = range(0,100):
+if b == range(0,100):
     roll = random.randint(1, 20)
 
-elif b = range(101,200):
+elif b == range(101,200):
     roll = random.randint(1, 12)
 
-elif b = range(201,300):
+elif b == range(201,300):
     roll = random.randint(1, 8)
 
-elif b = range(301,350):
+elif b == range(301,350):
     roll = random.randint(1, 4)
 
-elif b = range(351,400):
+elif b == range(351,400):
     roll = random.randint(-1, -4)
 
-elif b = range(401,500):
+elif b == range(401,500):
     roll = random.randint(-1, -8)
 
-elif b = range(501,600):
+elif b == range(501,600):
     roll = random.randint(-1, -12)
 
-elif b = range(601,700):
+elif b == range(601,700):
     roll = random.randint(-1, -20)
 
 else:
