@@ -10,7 +10,8 @@ print("Enter the pitcher's ERA (no decimal):")
 c = input()
 d = int(c)
 
-bat = random.randint(10, 100, 10)
+bat_avg = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+bat = random.choice(bat_avg)
 
 if b == range(0,100):
     roll = random.randint(1, 20)
