@@ -26,7 +26,7 @@ elif b in range(301,350):
     roll = random.randint(1, 4)
 
 elif b in range(351,400):
-    roll = random.randint(-1, -4)
+    roll = random.randint(-4, -1)
 
 elif b in range(401,500):
     roll = random.randint(-1, -8)
