@@ -4,6 +4,7 @@ class My:
         self.line_nr = 0
         self.token_feed = self.tokens()
         self.returned_token = None
+        self.stack = []
 
     def raise_error(self, message):
         raise ValueError(f'{self.line_nr}: {message}')
@@ -77,3 +78,9 @@ class My:
         except ValueError as exc:
             print(str(exc))
             return False
+
+    def stack_push(self, arg):
+        self.stack.append(arg)
+
+    def stack_pop(self):
+        return self.stack.pop()
