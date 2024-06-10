@@ -91,3 +91,9 @@ class My:
 
     def stack_pop(self):
         return self.stack.pop()
+
+if __name__ == '__main__':
+    with open(sys.argv[1], 'rt') as f:
+        code = f.read()
+    program = My(code)
+    program.run()
