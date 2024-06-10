@@ -2,6 +2,7 @@ class My:
     def __init__(self, code):
         self.code = code
         self.line_nr = 0
+        self.token_feed = self.tokens()
 
     def raise_error(self, message):
         raise ValueError(f'{self.line_nr}: {message}')
@@ -17,3 +18,10 @@ class My:
                 else:
                     self.raise_error(f'Syntax Error: Invalid token {token}')
             yield ('\n',)
+            
+    def next_token(self):
+        try:
+            token = next(self.token_feed)
+        except StopIteration:
+            token = None
+        return token
