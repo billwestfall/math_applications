@@ -65,11 +65,18 @@ class My:
             self.raise_error('Expected: expression')
         return True
 
+        value = self.stack_pop()
+        print(value)
+        return True
+
     def parse_expression(self):
         token = self.next_token()
         if token[0] != 'number':
             self.return_token(token)
             return False
+        return True
+
+        self.stack_push(token[1])
         return True
 
     def run(self):
