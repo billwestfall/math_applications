@@ -54,3 +54,26 @@ class My:
         if token[0] != '\n':
             self.raise_error('Expected: end of line')
         return True
+
+    def parse_print_statement(self):
+        token = self.next_token()
+        if token[0] != 'print':
+            self.return_token(token)
+            return False
+        if not self.parse_expression():
+            self.raise_error('Expected: expression')
+        return True
+
+    def parse_expression(self):
+        token = self.next_token()
+        if token[0] != 'number':
+            self.return_token(token)
+            return False
+        return True
+
+    def run(self):
+        try:
+            return self.parse_program()
+        except ValueError as exc:
+            print(str(exc))
+            return False
