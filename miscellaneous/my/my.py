@@ -15,9 +15,7 @@ class My:
         for line in self.code.strip().split('\n'):
             self.line_nr += 1
             for token in line.strip().split(' '):
-                if token == 'print(':
-                    yield (token,)
-                elif token == ')':
+                if token in ['print', '(', ')']:
                     yield (token,)
                 elif token.isnumeric():
                     yield ('number', int(token))
@@ -62,7 +60,7 @@ class My:
 
     def parse_print_statement(self):
         token = self.next_token()
-        if token[0] != 'print(':
+        if token[0] != 'print':
             self.return_token(token)
             return False
         if not self.parse_expression():
