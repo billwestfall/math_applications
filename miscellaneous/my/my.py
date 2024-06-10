@@ -20,6 +20,13 @@ class My:
                     self.raise_error(f'Syntax Error: Invalid token {token}')
             yield ('\n',)
 
+    def run(self):
+        try:
+            return self.parse_program()
+        except ValueError as exc:
+            print(str(exc))
+            return False
+
 if __name__ == '__main__':
     with open(sys.argv[1], 'rt') as f:
         code = f.read()
