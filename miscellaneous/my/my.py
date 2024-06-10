@@ -73,7 +73,7 @@ class My:
 
     def parse_expression(self):
         token = self.next_token()
-        if token[0] != 'number':
+        if token[1] != 'number':
             self.return_token(token)
             return False
         return True
