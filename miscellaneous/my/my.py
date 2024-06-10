@@ -1,3 +1,5 @@
+import sys
+
 class My:
     def __init__(self, code):
         self.code = code
