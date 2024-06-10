@@ -60,7 +60,7 @@ class My:
 
     def parse_print_statement(self):
         token = self.next_token()
-        if token[0] != '+':
+        if token[1] != '+':
             self.return_token(token)
             return False
         if not self.parse_expression():
