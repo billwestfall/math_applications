@@ -22,7 +22,7 @@ class My:
 
     def run(self):
         try:
-            return self.tokens()
+            print(self.tokens())
         except ValueError as exc:
             print(str(exc))
             return False
